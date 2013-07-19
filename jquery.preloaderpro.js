@@ -100,6 +100,9 @@
 				$(imgLoad).bind("load", function() {
 					imgCallback();
 				});
+				$(imgLoad).bind("error", function(){
+					imgCallback();
+				});
 				$(imgLoad).attr("src", _opts.items[i]);
 				$(imgLoad).appendTo($(_opts.preloader));
 			}
